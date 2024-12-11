@@ -3,11 +3,13 @@ module github.com/jibbscript/dbminer-multi
 go 1.23.0
 
 require (
+	github.com/go-sql-driver/mysql v1.8.1
 	github.com/qiniu/qmgo v1.1.9
 	gopkg.in/mgo.v2 v2.0.0-20190816093944-a6b53ec6cb22
 )
 
 require (
+	filippo.io/edwards25519 v1.1.0 // indirect
 	github.com/go-playground/locales v0.13.0 // indirect
 	github.com/go-playground/universal-translator v0.17.0 // indirect
 	github.com/go-playground/validator/v10 v10.4.1 // indirect

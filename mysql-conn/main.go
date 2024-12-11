@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	db, err := sql.Open("mysql", "root:root@tcp(127.0.0.1:3306)/store")
+	db, err := sql.Open("mysql", "root:password@tcp(127.0.0.1:3306)/store")
 	if err != nil {
 		log.Panicln(err)
 	}
