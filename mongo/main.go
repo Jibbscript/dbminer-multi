@@ -25,7 +25,8 @@ func New(host string) (*MongoMiner, error) {
 }
 
 func (m *MongoMiner) connect() error {
-	client, err := mongo.Connect(context.Background(), options.Client().ApplyURI(m.Host))
+	mHostScheme := "mongodb://" + m.Host
+	client, err := mongo.Connect(context.Background(), options.Client().ApplyURI(mHostScheme))
 	if err != nil {
 		return err
 	}
