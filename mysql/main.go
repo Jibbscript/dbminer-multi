@@ -25,6 +25,10 @@ func New(host string) (*MySQLMiner, error) {
 	return &m, nil
 }
 
+func (m *MySQLMiner) GetDbClass() string {
+	return m.DbClass
+}
+
 func (m *MySQLMiner) connect() error {
 
 	db, err := sql.Open("mysql", fmt.Sprintf("root:password@tcp(%s:3306)/information_schema", m.Host))

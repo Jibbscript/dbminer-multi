@@ -7,6 +7,7 @@ import (
 
 type DatabaseMiner interface {
 	GetSchema() (*Schema, error)
+	GetDbClass() string
 }
 
 type Schema struct {
@@ -28,7 +29,7 @@ func Search(m DatabaseMiner) error {
 	if err != nil {
 		return err
 	}
-
+	fmt.Println(m.GetDbClass() + " VICTIM!!! YEET")
 	re := getRegex()
 	for _, database := range s.Databases {
 		for _, table := range database.Tables {

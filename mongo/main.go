@@ -13,15 +13,20 @@ import (
 type MongoMiner struct {
 	Host    string
 	session *mongo.Client
+	DbClass string
 }
 
 func New(host string) (*MongoMiner, error) {
-	m := MongoMiner{Host: host}
+	m := MongoMiner{Host: host, DbClass: "mongo"}
 	err := m.connect()
 	if err != nil {
 		return nil, err
 	}
 	return &m, nil
+}
+
+func (m *MongoMiner) GetDbClass() string {
+	return m.DbClass
 }
 
 func (m *MongoMiner) connect() error {
