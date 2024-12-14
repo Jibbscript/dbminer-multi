@@ -68,14 +68,6 @@ To add support for a new database type:
 2. Implement the DatabaseMiner interface
 3. Provide database-specific connection and schema extraction logic
 
-## License
-
-This project is licensed under the GNU General Public License v3.0 - see the LICENSE file for details.
-
-## Security Notice
-
-This tool is intended for authorized security testing and educational purposes only. Unauthorized database scanning or data extraction may violate applicable laws and regulations.
-
 ## Contributing
 
 1. Fork the repository
@@ -84,6 +76,14 @@ This tool is intended for authorized security testing and educational purposes o
 4. Push to the branch
 5. Create a new Pull Request
 
+## Security Notice
+
+This tool is intended for authorized security testing and educational purposes only. Unauthorized database scanning or data extraction may violate applicable laws and regulations.
+
 ## Disclaimer
 
 This tool is provided for educational and authorized testing purposes only. Users are responsible for ensuring compliance with applicable laws and regulations when using this tool.
+
+## License
+
+This project is licensed under the GNU General Public License v3.0 - see the LICENSE file for details.
